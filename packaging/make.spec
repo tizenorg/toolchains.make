@@ -14,6 +14,7 @@ License:    GPLv2+
 URL:        http://www.gnu.org/software/make/
 Source0:    ftp://ftp.gnu.org/gnu/make/make-%{version}.tar.bz2
 Source100:  make.yaml
+Source1001: packaging/make.manifest 
 Patch0:     make-3.79.1-noclock_gettime.patch
 Patch1:     make-3.80-j8k.patch
 Patch2:     make-3.80-getcwd.patch
@@ -58,6 +59,7 @@ makefile.
 # << setup
 
 %build
+cp %{SOURCE1001} .
 # >> build pre
 # << build pre
 
@@ -86,6 +88,7 @@ rm -rf %{buildroot}%{_infodir}
 
 
 %files
+%manifest make.manifest
 %defattr(-,root,root,-)
 # >> files
 %doc NEWS README COPYING AUTHORS
