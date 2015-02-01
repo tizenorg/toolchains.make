@@ -17,6 +17,7 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
+
 Name:           make
 Url:            http://www.gnu.org/software/make/make.html
 Provides:       gmake
